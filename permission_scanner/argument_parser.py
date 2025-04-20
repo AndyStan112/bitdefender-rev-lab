@@ -20,7 +20,9 @@ def parse_interval(interval: str) -> timedelta:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(prog='scan.py')
     parser.add_argument(
-        'mode', choices=['-d', '-e', ''], default="", nargs='?')
+        'mode', choices=['-d', '-e', ''], default="",
+        nargs='?', metavar='[-d | -e]',
+        help='(Optional) Mode of operation: -d for device or -e for emulator. By default the latest used in adb is used')
     parser.add_argument(
         '--search_time',
         type=lambda s: datetime.strptime(s, "%Y-%m-%d %H:%M"),

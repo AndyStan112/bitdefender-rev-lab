@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "bitdefender-rev-lab"
+version = "0.1.0"
+description = "Bitdefender REVERSE Lab Python Tools"
+authors = ["Stanica Andrei-Claudiu stanica.andrei28@gmail.com"]
+readme = "README.MD"
+packages = [
+    { include = "lib" },
+    { include = "permission_scanner" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.14"
+argcomplete = "^3.6.2"
+androguard = "^4.1.3"
+
+
+[tool.poetry.scripts]
+permission-scan = "permission_scanner.scan:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

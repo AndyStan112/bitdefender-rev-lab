@@ -15,7 +15,7 @@ class Adb:
         return self.pull(path)
 
     def pull(self, path: str) -> BytesIO:
-        command = f"exec-out cat {path}"
+        command = f'exec-out cat "{path}"'
         return BytesIO(self._stream(command))
 
     def execute(self, command: str) -> str:

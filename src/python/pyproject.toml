@@ -20,6 +20,8 @@ pycryptodome = "^3.22.0"
 [tool.poetry.scripts]
 permission-scan = "permission_scanner.scan:main"
 decrypt = "aes_decrypter.decrypt:main"
+keygen = "keygen.keygen:main"
+rev_dec = "rev_decrypter.rev_decrypt:main"
 
 [build-system]
 requires = ["poetry-core"]
